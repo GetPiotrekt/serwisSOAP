@@ -50,7 +50,7 @@ public class Main {
 
         SOAPElement elementZapytaniaSOAP = cialoSOAP.addChildElement("NumberToWords", "web");
         SOAPElement elementParametruSOAP = elementZapytaniaSOAP.addChildElement("ubiNum", "web");
-        elementParametruSOAP.addTextNode("123"); // tutaj mozna zmieniać wartość
+        elementParametruSOAP.addTextNode("123456"); // tutaj mozna zmieniać wartość
 
         wiadomoscSOAP.saveChanges();
 
@@ -71,7 +71,7 @@ public class Main {
 
         SOAPElement elementZapytaniaSOAP = cialoSOAP.addChildElement("NumberToDollars", "web");
         SOAPElement elementParametruSOAP = elementZapytaniaSOAP.addChildElement("dNum", "web");
-        elementParametruSOAP.addTextNode("123"); // tutaj mozna zmieniać wartość
+        elementParametruSOAP.addTextNode("123456"); // tutaj mozna zmieniać wartość
 
         wiadomoscSOAP.saveChanges();
 
@@ -84,7 +84,7 @@ public class Main {
         SOAPBody cialoOdpowiedziSOAP = odpowiedzSOAP.getSOAPBody();
         String zawartoscOdpowiedzi = cialoOdpowiedziSOAP.getTextContent();
 
-        System.out.println("Odpowiedź SOAP dla wartości '123'. Funkcja: (" + operation + "):");
+        System.out.println("Odpowiedź SOAP dla wartości '123456'. Funkcja: (" + operation + "):");
         System.out.println(zawartoscOdpowiedzi.trim());
         System.out.println();
     }
